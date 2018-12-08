@@ -156,7 +156,15 @@ class EventClassNew extends React.Component {
             
              </div>
             </div>
-              <div className="row"></div>
+              <div className="row">
+              <div className="col-sm-3">
+             <p >Event Date</p>
+             </div>
+             <div className="col-sm-9" >
+             {this.state.items.date}
+            
+             </div>
+              </div>
              
         
              <button type="submit" onClick={this.handleSubmit} style={{'display': this.state.isLoggedIn === true ? 'block': 'none'}}>Attend</button>
