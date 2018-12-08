@@ -283,7 +283,7 @@ app.get('/account/verify', (req, res, next) => {
     } else {
       return res.send({
         success: true,
-        message: 'Good'
+        message: 'Good bye, please come again!'
       })
     }
   })

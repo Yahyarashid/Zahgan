@@ -1,5 +1,5 @@
 
-# Project Title
+# Zahgan
 
 This project aims to serve the many people who are always contemplating what to do on their freetime.
 
@@ -9,11 +9,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+Need to install node package manager on your personal computer and install yarn, then npm install and yarn the packages in the repo and in the client
 
-```
-Give examples
-```
 
 ### Installing
 
