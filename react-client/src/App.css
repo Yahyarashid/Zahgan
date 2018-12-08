@@ -296,19 +296,20 @@ h1{
 }
 
 
-.mapModal{
+ .mapModal{
   width:100%;
-  height: auto;
+  height: 300px;
+
 }
-.mapModal div:first-child {
+/* .mapModal div:first-child {
 width: 80% !important;
 min-height:200px;
 border-radius: 5px;
 margin-left:20px;
 }
 .mapModal div:nth-child(2) {
-display: none !important;
-}
+display: none !important; 
+ }  */
 .service-box .service-icon .front-content h3 {
  font-size: 15px;
  color: white;

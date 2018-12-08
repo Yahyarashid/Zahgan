@@ -1,6 +1,6 @@
 import React from 'react'
 import $ from 'jquery';
-import Modal from './Modal/Modal'
+import Modal from '../Modal/Modal'
 
 
 class Eventcreat extends React.Component {

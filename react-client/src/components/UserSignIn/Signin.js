@@ -15,6 +15,7 @@ class Signin extends React.Component {
       this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    // Should sign in when user submits log in credentials
     handleSubmit(event) {
       var obj = {
         email: this.state.email,
@@ -22,6 +23,8 @@ class Signin extends React.Component {
       }
 
       console.log(obj)
+      // POST request to sign the user in
+      // Also changing the state of loggedin on the component to true
       $.ajax({
         type: "POST",
         url: '/account/signin',
@@ -45,7 +48,7 @@ class Signin extends React.Component {
       event.preventDefault();
     }
     
-
+    // If the user has successfully logged in then redirect to home
   render() {
       if (this.state.isLoggedIn) {
         return  <Redirect to={{

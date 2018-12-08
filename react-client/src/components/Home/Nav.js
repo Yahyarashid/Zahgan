@@ -15,6 +15,8 @@ class Nav extends React.Component {
 		this.signOut = this.signOut.bind(this);
 	}
 
+	// Component did mount is checking whether the randomly generated JWT token is stored in the local storage
+	// if it has been saved then change the state of loggedIn to true and then save the username in the state as well
 	componentDidMount() {
 		console.log('componentdidmount')
 		if(localStorage.getItem('token')){
@@ -70,6 +72,7 @@ class Nav extends React.Component {
     }
 }
 
+// Post request to logout the user when logout is pressed
  signOut = (event) => {
     $.ajax({
         type: "POST",
@@ -92,10 +95,14 @@ class Nav extends React.Component {
 			event.preventDefault();
 }
 
+// Function to make the first letter in a string uppercase
  jsUcfirst = (string) => {
   return string.charAt(0).toUpperCase() + string.slice(1);
  }
 
+
+
+ 
 
 	render(){
     return(

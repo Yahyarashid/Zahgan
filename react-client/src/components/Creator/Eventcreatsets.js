@@ -1,9 +1,9 @@
 import React from 'react'
 import $ from 'jquery';
-import Modal from './Modal/Modal'
+import Modal from '../Modal/Modal'
 
 
-class Reservedcreat extends React.Component {
+class Eventcreatsets extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,7 +19,7 @@ class Reservedcreat extends React.Component {
 
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.delete = this.delete.bind(this);
+ 
   }
 
   showModal = () => {
@@ -79,20 +79,7 @@ class Reservedcreat extends React.Component {
   }
 
 
-delete(x){
-    alert("ar u sure u want to delet :" + this.state.items.eventName)
 
-    var id =  this.state.items._id
-    $.ajax({
-        type: "DELETE",
-        url: '/create/' + id,
-        success: function (data) {
-         alert( "deleted" )
-        }
-      });
-
-
-}
 
 
   render() {
@@ -100,15 +87,15 @@ delete(x){
 
 
     return (
-      <div className="container-fluid">
+  
+       <div className="container-fluid">
       <table class="table table-striped primary">
          
       <thead>
         <tr class="bg-primary ">
           <th scope="col " className="th-evenName">#</th>
           <th scope="col" className="th-evenName">Event Name</th>
-          <th scope="col" className="th-evenName">Reserved Seats </th>
-          <th scope="col" className="th-evenName">Attending Data  </th>
+          <th scope="col" className="th-evenName">Remaining Seats </th>
        
         </tr>
       </thead>
@@ -116,39 +103,18 @@ delete(x){
         <tr className="primary">
           <th scope="row"></th>
           <td>{this.state.items.eventName}</td>
-          <td>{this.state.items.attending.length}</td>
-          <td>    {
-                    this.state.items.attending.map((item) =>{
-                    return(<div className="row" >
-                       <div class="col-lg-6">
-
-                      {item.Name  }  
-                     </div>
-                     <div class="col-lg-6">
-                      
-                     {item.Phone}
-                    </div>
-                    </div>)
-                    
-                    })
-                    
-                    }  </td>
+          <td>{this.state.items.availableSeats - this.state.items.attending.length}</td>
   </tr>
     
       </tbody>
     </table>
 
    
-
-
-             
-              
-             
-                               
-      
+   </div>
         
-      </div>
+        
+     
     );
   }
 }
-export default Reservedcreat
+export default Eventcreatsets

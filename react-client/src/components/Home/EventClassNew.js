@@ -1,8 +1,8 @@
 import React from 'react'
 import $ from 'jquery';
-import Modal from './Modal/Modal'
+import Modal from '../Modal/Modal'
 import './event.css';
-import SimpleMap from './map'
+import SimpleMap from '../Creator/map'
 
 
 class EventClassNew extends React.Component {
@@ -35,7 +35,7 @@ class EventClassNew extends React.Component {
       });
     }
   }
-
+// to toggle the modal
   showModal = () => {
     this.setState({
       ...this.state,
@@ -43,6 +43,7 @@ class EventClassNew extends React.Component {
     });
 
   }
+  // take the data when its submit
 
   handleSubmit(event, item) {
     console.log("secound parameter", this.state.items.attending)
@@ -161,7 +162,7 @@ class EventClassNew extends React.Component {
              <button type="submit" onClick={this.handleSubmit} style={{'display': this.state.isLoggedIn === true ? 'block': 'none'}}>Attend</button>
            
              </div>
-             <div className="col-sm-6">   <div className="mapModal">
+             <div className="col-sm-5">   <div className="mapModal">
        
        <SimpleMap item={this.state.items} /> 
     

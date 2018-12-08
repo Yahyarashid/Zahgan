@@ -1,6 +1,7 @@
+
 import React from 'react'
 import $ from 'jquery';
-import EventClassNew from './EventClassNew'
+import EventClassNew from '../Home/EventClassNew'
 import GoogleMapReact from 'google-map-react';
 
 import Eventcreat from './Eventcreat'

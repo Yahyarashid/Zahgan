@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import './App.css';
-import Nav from './components/Nav'
+import Nav from './components/Home/Nav'
 import {BrowserRouter ,Route ,Switch} from 'react-router-dom'
-import HomeClass from './components/HomeClass'
-import Error from './components/Error'
+import HomeClass from './components/Home/HomeClass'
+
 import Create from './components/Creator/Create'
 import $ from 'jquery';
-import Signup from './components/Signup';
-import Signin from './components/Signin';
+import Signup from './components/UserSignIn/Signup';
+import Signin from './components/UserSignIn/Signin';
 import SignInCreator from './components/Creator/SignInCreator';
 import Slideshow from './components/Slider/Slideshow';
-import Eventcreatshow from './components/Eventcreatshow';
-import Eventsets from './components/Eventsets'
-import Reserved from './components/Reserved';
+import Eventcreatshow from './components/Creator/Eventcreatshow';
+import Eventsets from './components/Creator/Eventsets'
+import Reserved from './components/Creator/Reserved';
 import Footer from './components/Footer';
 import location from './components/about/pages/location';
 import vision from './components/about/pages/vision';

@@ -1,12 +1,12 @@
 import React from 'react'
 import $ from 'jquery';
-import EventClassNew from '../EventClassNew'
+import EventClassNew from '../Home/EventClassNew'
 import GoogleMapReact from 'google-map-react';
-import SimpleMap from '../map';
-import Eventcreat from '../Eventcreat'
-import MapForCreator from '../mapForCreator'
-import Eventsets from '../Eventsets'
-import Eventcreatshow from '../Eventcreatshow'
+import SimpleMap from './map';
+import Eventcreat from './Eventcreat'
+import MapForCreator from './mapForCreator'
+import Eventsets from './Eventsets'
+import Eventcreatshow from './Eventcreatshow'
 import {BrowserRouter ,Route ,Switch} from 'react-router-dom'
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
@@ -256,7 +256,7 @@ class Create extends React.Component {
                 <h6 className="list-group-item"><span className="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Number of your events : <h6 class="badge"> {this.state.items.length} </h6></h6>
                 <h6 className="list-group-item"><span className="glyphicon glyphicon-pencil" aria-hidden="true"></span>Remaning seats for each event <h6 class="badge"> {this.viewlest(this)} </h6></h6>
               </div>
-            </div>
+s            </div>
 
           </div>
 

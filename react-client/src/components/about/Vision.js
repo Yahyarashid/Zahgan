@@ -1,5 +1,5 @@
 import React from 'react'
-import zahgan from '../zahgan.jpg';
+import zahgan from '../Home/zahgan.jpg';
 import location from './pages/location'
 import vision from './pages/vision'
 import './Vision.css';
