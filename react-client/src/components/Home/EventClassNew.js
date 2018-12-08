@@ -14,12 +14,8 @@ class EventClassNew extends React.Component {
       Name: '',
       Phone: '',
       isLoggedIn: false,
-      attended: false
-
 
     }
-
-
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -72,12 +68,12 @@ class EventClassNew extends React.Component {
       success: function (data) {
         console.log("my data", data)
         alert("successfully attended")
+        document.getElementById("name").value = ''
+        document.getElementById("phone").value = ''
       }
     });
-    this.setState({
-      attended: true
-    })
-
+    
+    
 
 
     // alert(obj.eventName + ' saved !');
@@ -131,7 +127,7 @@ class EventClassNew extends React.Component {
              
               </div>
               <div className="col-sm-2">
-              <input style={{'display': this.state.isLoggedIn === true ? 'block': 'none'}} type="text" value={this.state.Name}
+              <input id="name" style={{'display': this.state.isLoggedIn === true ? 'block': 'none'}} type="text" value={this.state.Name}
                   onChange={e => this.setState({ Name: e.target.value })}></input>
              
               </div></div>
@@ -147,7 +143,7 @@ class EventClassNew extends React.Component {
              
               </div>
               <div className="col-sm-2">
-              <input style={{'display': this.state.isLoggedIn === true ? 'block': 'none'}} type="text" value={this.state.Phone}
+              <input id="phone" style={{'display': this.state.isLoggedIn === true ? 'block': 'none'}} type="text" value={this.state.Phone}
                   onChange={e => this.setState({ Phone: e.target.value })}></input>
              
               </div></div>
@@ -172,32 +168,10 @@ class EventClassNew extends React.Component {
       
       </div></div>
              </div>
-          
-             
-       
-      
-      
-      
-      
-      
-    
 
-
-
-
-
-
-
-
-
-
-
-
-       
         </Modal>
 
 
-        
      <div id="events">
          
          <div className="images">
