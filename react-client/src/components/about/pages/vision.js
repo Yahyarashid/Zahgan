@@ -5,7 +5,7 @@ const vision = () => {
     return (
         <div className='vision'>
                 <div className='container'>
-                    <h1 className='display-3 row justify-content-center abti'><strong >About Us</strong></h1>   
+               
                 </div>
             <div className='about'>
                 <div className=" row justify-content-center">
