@@ -20,6 +20,7 @@ class Create extends React.Component {
     zoom: 10
   };
   constructor(props) {
+    // all the function to set thes value from the text boxs is rten in the render function in line 
     super(props);
     this.state = {
       host: '',
